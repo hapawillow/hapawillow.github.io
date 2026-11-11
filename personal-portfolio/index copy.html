@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Harold MacKenzie – Hands-on Engineering &amp; Architecture</title>
+  <meta name="description" content="Harold MacKenzie builds web and mobile products, cloud backends, and custom integrations. Available for freelance, contract, and consulting work.">
+  <link rel="canonical" href="https://hapawillow.com/personal-portfolio/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Harold MacKenzie – I design the system. I write the code.">
+  <meta property="og:description" content="Selected web, mobile, cloud, and integration work. Freelance · Contract · Consulting.">
+  <meta property="og:url" content="https://hapawillow.com/personal-portfolio/">
+  <meta name="theme-color" content="#f7f5ef">
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <link rel="preload" href="./assets/fonts/muli-regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="./assets/fonts/muli-semibold.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="./portfolio.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="../" aria-label="Hapa Willow home">
+        <img src="../images/hapa-willow.png" alt="" width="38" height="38">
+        <span>Hapa Willow<span class="brand-divider" aria-hidden="true"> / </span><span class="brand-note">Independent work</span></span>
+      </a>
+      <nav aria-label="Portfolio navigation">
+        <a href="#work">Work</a>
+        <a href="#how-i-work">Approach</a>
+        <a href="#about">About</a>
+        <a class="nav-contact" href="#contact">Let’s talk <span aria-hidden="true">↗</span></a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-heading">
+        <div class="eyebrow">Harold MacKenzie <span aria-hidden="true">/</span> Software engineer &amp; architect</div>
+        <h1 id="hero-heading">I design the system.<br><em>I write the code.</em></h1>
+        <div class="hero-bottom">
+          <div>
+            <p class="hero-intro">I build web and mobile products, cloud backends, and the integrations that connect them. From the first architecture decision to the details people actually use.</p>
+            <div class="hero-actions">
+              <a class="button" href="#work">Explore my work <span aria-hidden="true">↓</span></a>
+              <a class="text-link" href="mailto:haroldmackenzie@gmail.com?subject=Let%E2%80%99s%20talk%20about%20a%20project">Talk about a project <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+          <aside class="availability" aria-label="Engagement types">
+            <p class="availability-title"><span class="status-dot" aria-hidden="true"></span> Open to working together</p>
+            <p>Freelance · Contract · Consulting</p>
+            <p class="muted">Based in Torrance, California</p>
+          </aside>
+        </div>
+        <div class="hero-index" aria-label="Areas of work">
+          <span><span class="index-number">01</span> Web &amp; mobile</span>
+          <span><span class="index-number">02</span> Cloud architecture</span>
+          <span><span class="index-number">03</span> APIs &amp; integrations</span>
+        </div>
+      </section>
+
+      <section id="work" class="work-section" aria-labelledby="work-heading">
+        <div class="section-heading">
+          <div><p class="eyebrow">A look inside the work</p><h2 id="work-heading">Products I’m building.</h2></div>
+          <p>Working software, connected systems,<br class="desktop-break"> and plenty of time in the code.</p>
+        </div>
+
+        <!-- Authoring notes and requested additions: docs/personal-portfolio-content.md -->
+        <article id="the-notifier" class="project project-notifier" aria-labelledby="notifier-heading">
+          <div class="project-heading">
+            <div><p class="project-meta"><span class="project-number">01</span> Current project</p><h3 id="notifier-heading">The Notifier</h3></div>
+            <a class="text-link" href="https://thenotifier.app/" target="_blank" rel="noopener noreferrer">Visit the product <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a>
+          </div>
+          <div class="project-grid">
+            <div class="project-copy">
+              <p class="project-lede">One platform. Web, mobile, and an alerting API.</p>
+              <p>The Notifier serves as a hub on their phone for personal alerts (alarms and local notifications) and external alerts (push notifications) and does it in a way that maintains user privacy without any user registration - it doesn't collect email, phone number or any personal identifiable information (PII). Users can create alerts with an alarm, note, link, repeat and calendar sync. A business can send a message to a group of phones or an individual phone - The Notifier delivers the message without compromising the user's PII.</p>
+							<p>The basic flow for external alerts is:</p>
+							<ol class="work-list">
+								<li>Business shares the QR code or link for its alerts.</li>
+								<li>Customer scans QR code or taps link on their phone, which opens the app so customer can confirm.</li>
+								<li>Backend adds customer the to alert group using an app generated device ID and its push token.
+								<li>Business sends or schedules an alert from the SaaS.</li>
+								<li>Cron runs every minute to send any alerts whose "send at" time has passed.</li>
+								<li>For each alert, a push notification is created and sent to each active member in the alert group</li>
+								<li>Alert lands on the customer's phone.</li>
+								<li>The customer taps on the alert banner, which opens the app and shows the alert details.</li>
+							</ol>
+							<p>Our privacy stance complicated system security:</p>
+              <ul class="work-list">
+								<li>App uses device attestation, signed requests with keypairs, rate limiting, secure device storage (Keystore/Keychain).</li>
+								<li>HMAC-SHA-256 of external IDs are used for individual messages to preserve user anonymity.</li>
+							</ul>
+							<p>I work on the UI/UX for the mobile apps, website, SaaS, backend processing for alerts, data sync, in-app payments, stripe integration, and APIs.</p>
+							<p>I used Hemes Agent for outbound marketing: market research, search for prospects, scrape for contact info, rank prospects, create initial and follow-up emails. It used higher reasoning models (eg, GPT Sol) for planning and orchestration and lower reasoning/cheap models (eg. DeepSeek) for implementation and execution</p>
+
+              <p class="role"><span>My role</span> Founder &amp; hands-on developer, building with one other engineer.</p>
+              <ul class="work-list">
+                <li>Astro websites and SvelteKit web applications.</li>
+                <li>Expo apps for iOS and Android, including Swift and Kotlin native packages.</li>
+                <li>Cloudflare services, PostgreSQL data, and WorkOS authentication.</li>
+                <li>A custom WooCommerce plugin that connects stores to The Notifier.</li>
+              </ul>
+            </div>
+            <figure class="product-visual notifier-visual">
+              <div class="visual-label"><span class="status-dot" aria-hidden="true"></span> From the dashboard to the phone</div>
+              <a class="dashboard-shot" href="./assets/notifier-dashboard.webp" target="_blank" rel="noopener noreferrer" aria-label="View full-size Notifier dashboard screenshot (opens in a new tab)">
+                <div class="window-bar" aria-hidden="true"><span></span><span></span><span></span><span class="window-title">The Notifier / Create an alert</span></div>
+                <img src="./assets/notifier-dashboard.webp" alt="The Notifier web dashboard with the Create Alert dialog open, showing group, date, message, and scheduling controls." width="1337" height="835" fetchpriority="high">
+              </a>
+              <a class="notifier-phone" href="./assets/notifier-personal.webp" target="_blank" rel="noopener noreferrer" aria-label="View full-size Notifier mobile screenshot (opens in a new tab)">
+                <img src="./assets/notifier-personal.webp" alt="The Notifier mobile app displaying a group update alongside personal reminders." width="640" height="819">
+              </a>
+              <figcaption>Web dashboard + mobile receiving app. Select either image to view it in full.</figcaption>
+            </figure>
+          </div>
+          <div class="project-stack"><span class="stack-label">Core stack</span><p>TypeScript · Expo · Cloudflare Workers · PlanetScale PostgreSQL · SvelteKit · Astro</p></div>
+          <details class="technical-details">
+            <summary>More of the stack</summary>
+            <div class="details-content stack-columns">
+              <p><strong>Runtime &amp; data</strong> Workers, Containers, KV, D1, R2 / S3, PostgreSQL, SQLite, Hono, Drizzle ORM.</p>
+              <p><strong>Product &amp; integrations</strong> WorkOS, Resend, Stripe, Expo Push Notification Service, Tailwind, WordPress / WooCommerce, PHP.</p>
+              <p><strong>Workflow tooling</strong> n8n, Firecrawl, Hermes Agent, Linear.</p>
+            </div>
+          </details>
+        </article>
+
+        <article id="senshin" class="project project-senshin" aria-labelledby="senshin-heading">
+          <div class="project-heading">
+            <div><p class="project-meta"><span class="project-number">02</span> Current project · Solo build</p><h3 id="senshin-heading">Senshin</h3></div>
+            <a class="text-link" href="https://senshin.app/" target="_blank" rel="noopener noreferrer">Visit the product <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a>
+          </div>
+          <div class="project-grid senshin-grid">
+            <figure class="product-visual senshin-visual">
+              <div class="visual-label">A minute to shift gears.</div>
+              <div class="senshin-phones">
+                <a href="./assets/senshin-enigma.webp" target="_blank" rel="noopener noreferrer" aria-label="View full-size Senshin Enigma screenshot (opens in a new tab)"><img src="./assets/senshin-enigma.webp" alt="Senshin’s Enigma activity, an optical pattern with session controls." width="450" height="920" loading="lazy"></a>
+                <a href="./assets/senshin-dashboard.webp" target="_blank" rel="noopener noreferrer" aria-label="View full-size Senshin dashboard screenshot (opens in a new tab)"><img src="./assets/senshin-dashboard.webp" alt="Senshin dashboard charting activity across Focus, Relax, Creative, and Active categories." width="450" height="920" loading="lazy"></a>
+              </div>
+              <figcaption>An interactive reset and the activity dashboard. Actual app screens.</figcaption>
+            </figure>
+            <div class="project-copy">
+              <p class="project-lede">Small interactions. A complete mobile product.</p>
+              <p>One-minute activities that use sound, visuals, haptics, and simple play to help people take a purposeful break. The experience spans four categories: Focus, Relax, Creative, and Active.</p>
+              <p class="role"><span>My role</span> Solo builder, from the mobile experience to the supporting cloud services.</p>
+              <ul class="work-list">
+                <li>Expo mobile development with local SQLite storage.</li>
+                <li>Interactive activities combining audio, visuals, and touch.</li>
+                <li>Cloudflare Workers, D1, and R2 supporting the app.</li>
+                <li>RevenueCat subscriptions and an Astro website in five languages.</li>
+              </ul>
+              <p class="project-note">Currently in development for iPhone.</p>
+            </div>
+          </div>
+          <div class="project-stack"><span class="stack-label">Core stack</span><p>TypeScript · Expo · SQLite · Cloudflare Workers / D1 / R2 · RevenueCat</p></div>
+          <details class="technical-details">
+            <summary>More of the stack</summary>
+            <div class="details-content"><p>Hono · Drizzle ORM · Tailwind · Astro · Expo Push Notification Service · Linear. The Expo codebase targets iOS and Android; the current public product is focused on iPhone.</p></div>
+          </details>
+        </article>
+
+        <article id="woocommerce" class="integration" aria-labelledby="integration-heading">
+          <div class="integration-copy">
+            <p class="eyebrow">Integration spotlight</p>
+            <h3 id="integration-heading">The last mile matters.</h3>
+            <p>I built a WordPress / WooCommerce plugin that lets a shop send ad hoc storewide updates and back-in-stock alerts for individual product variants through The Notifier.</p>
+            <p class="integration-stack">PHP · WordPress · WooCommerce · The Notifier API</p>
+          </div>
+          <div class="integration-flow" role="img" aria-label="WooCommerce store updates pass through The Notifier to the customer’s phone.">
+            <div class="flow-node"><span class="flow-symbol" aria-hidden="true">01</span><strong>The store</strong><span>WooCommerce</span></div>
+            <span class="flow-arrow" aria-hidden="true">→</span>
+            <div class="flow-node"><span class="flow-symbol" aria-hidden="true">02</span><strong>The connection</strong><span>Notifier API</span></div>
+            <span class="flow-arrow" aria-hidden="true">→</span>
+            <div class="flow-node"><span class="flow-symbol" aria-hidden="true">03</span><strong>The customer</strong><span>Mobile alert</span></div>
+          </div>
+        </article>
+      </section>
+
+      <section id="earlier-work" class="archive-section" aria-labelledby="archive-heading">
+        <div class="section-heading">
+          <div><p class="eyebrow">More from the workbench</p><h2 id="archive-heading">Earlier projects.</h2></div>
+          <p>Payments, learning, data, and creative tooling.<br class="desktop-break"> Open a project for the technical details.</p>
+        </div>
+        <div class="archive-list">
+          <details id="finlit-iq" class="archive-item">
+            <summary><span class="archive-number">01</span><span class="archive-title">FinLit IQ<span>Financial literacy · Mobile &amp; web</span></span><span class="archive-tools">Expo / Cloudflare / PostgreSQL</span><span class="expand-icon" aria-hidden="true"></span></summary>
+            <div class="archive-content">
+              <div><h3>Learning experiences, backed by a content platform.</h3><p>A financial literacy product combining short lessons, proactive guidance, and gamification. I designed and developed web and mobile experiences and an architecture using low-cost computing and AI agents for content workflows.</p><p><strong>Technical work:</strong> Astro and SvelteKit web development, Expo mobile development, PostgreSQL on Neon, SQLite on Turso, Drizzle ORM, R2 storage, and custom OAuth authentication.</p><p class="archive-stack">Also: TypeScript · Tailwind · Hono · Resend</p><p class="small-note">Architecture planning diagram.</p></div>
+              <figure class="architecture-figure"><a href="./assets/finlit-architecture.webp" target="_blank" rel="noopener noreferrer"><img src="./assets/finlit-architecture.webp" alt="FinLit IQ architecture planning diagram connecting course management, users, gamification, reporting, and lead generation to a mobile app." width="2200" height="1968" loading="lazy"><span>View architecture diagram <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></span></a></figure>
+            </div>
+          </details>
+          <details id="yez" class="archive-item">
+            <summary><span class="archive-number">02</span><span class="archive-title">Yez<span>B2B &amp; cross-border payments</span></span><span class="archive-tools">AWS Lambda / DynamoDB / Stellar</span><span class="expand-icon" aria-hidden="true"></span></summary>
+            <div class="archive-content"><div><h3>Payment workflows across systems and borders.</h3><p>A B2B payments project focused on cross-border transfers, digital invoicing, and escrow. The technical stack combined AWS serverless services with the Stellar blockchain.</p><p class="archive-stack">TypeScript · AWS Lambda · DynamoDB · SES · Hugo · Airtable · Stellar</p></div></div>
+          </details>
+          <details id="givful" class="archive-item">
+            <summary><span class="archive-number">03</span><span class="archive-title">Givful<span>Donations &amp; member engagement</span></span><span class="archive-tools">PHP / MySQL / Stripe / Twilio</span><span class="expand-icon" aria-hidden="true"></span></summary>
+            <div class="archive-content"><div><h3>A donation flow that keeps people involved.</h3><p>A nonprofit giving platform with branded donation pages, scheduled SMS reminders, PIN-approved donations, and reporting. The product connected member registration, payments, and recurring engagement.</p><p class="archive-stack">JavaScript · Foundation · PHP / Slim · Custom OAuth 2.0 · AWS EC2 / RDS MySQL / SES · Stripe · Twilio</p></div></div>
+          </details>
+          <details id="dnote" class="archive-item">
+            <summary><span class="archive-number">04</span><span class="archive-title">Dnote Mobile<span>Payments, digital gift cards &amp; loyalty</span></span><span class="archive-tools">Ionic / Angular / AWS / Payments</span><span class="expand-icon" aria-hidden="true"></span></summary>
+            <div class="archive-content"><div><h3>Mobile payments for small businesses.</h3><p>A payment and loyalty platform bringing digital gift cards and PIN-approved transactions to small businesses. It combined customer payment flows, merchant tools, messaging, and APIs for third-party developers.</p><p class="archive-stack">JavaScript · Angular 2 · Ionic · Bootstrap / Foundation · PHP / Slim · OAuth 2.0 · AWS EC2 / RDS MySQL / SES · Stripe · Twilio</p></div></div>
+          </details>
+          <details id="tunego-dashboard" class="archive-item">
+            <summary><span class="archive-number">05</span><span class="archive-title">TuneGO Dashboard<span>Internal business intelligence</span></span><span class="archive-tools">SvelteKit / Turso / ApexCharts</span><span class="expand-icon" aria-hidden="true"></span></summary>
+            <div class="archive-content"><div><h3>Make business health easier to read.</h3><p>An internal dashboard for business performance, refreshed every ten minutes. Reporting data was pushed into a separate Turso database; the dashboard did not need direct access to the company’s production systems.</p><p><strong>Technical focus:</strong> SvelteKit interfaces, ApexCharts visualizations, Drizzle data access, and passwordless sign-in with Lucia and Loops.</p><p class="archive-stack">TypeScript / Node.js · SvelteKit · Turso · Drizzle ORM · Lucia · Loops · ApexCharts</p></div></div>
+          </details>
+          <details id="tiki-totems" class="archive-item">
+            <summary><span class="archive-number">06</span><span class="archive-title">Tiki Totems<span>Generative art &amp; minting tools</span></span><span class="archive-tools">Node.js / Canvas / Solana</span><span class="expand-icon" aria-hidden="true"></span></summary>
+            <div class="archive-content"><div><h3>From layered artwork to a collection.</h3><p>A generative art project with a Node.js tool for composing layered assets, controlling trait quantities, and producing a rarity table. The broader project used an Astro site, Cloudflare Workers, and Metaplex Candy Machine on Solana.</p><p class="archive-stack">JavaScript / Node.js · Canvas API · Cloudflare Workers · Astro · Metaplex Candy Machine · Solana</p></div></div>
+          </details>
+          <details id="apm-collectibles" class="archive-item">
+            <summary><span class="archive-number">07</span><span class="archive-title">APM Collectibles / TuneGO<span>Animated collectible generation</span></span><span class="archive-tools">TypeScript / Node.js / ImageMagick</span><span class="expand-icon" aria-hidden="true"></span></summary>
+            <div class="archive-content"><div><h3>A repeatable pipeline for animated assets.</h3><p>A command-line generator that reads track and trait data from CSV, renders text and graphics with the Canvas API, then uses ImageMagick to composite those overlays onto animated GIFs. The wider collectibles project used the Flow blockchain.</p><p class="archive-stack">TypeScript / Node.js · Canvas API · ImageMagick · CSV processing · Flow</p></div></div>
+          </details>
+        </div>
+      </section>
+
+      <section id="how-i-work" class="approach-section" aria-labelledby="approach-heading">
+        <div class="approach-intro"><p class="eyebrow">How I can help</p><h2 id="approach-heading">A technical partner<br>who stays in the work.</h2><p>I work across the product, the code, and the infrastructure. Bring me in for a focused build, an integration, or an architecture problem that needs a practical path forward.</p></div>
+        <div class="offer-list">
+          <div class="offer"><span class="index-number">01</span><div><h3>Build a product or a feature</h3><p>Web applications, Expo mobile apps, APIs, authentication, and subscriptions. Connect the pieces into a usable product.</p></div></div>
+          <div class="offer"><span class="index-number">02</span><div><h3>Simplify the architecture</h3><p>Review a platform, untangle its dependencies, and plan a rebuild or migration. Experience spans AWS, Kubernetes, and today’s Cloudflare stack.</p></div></div>
+          <div class="offer"><span class="index-number">03</span><div><h3>Connect systems &amp; workflows</h3><p>Custom WordPress / WooCommerce plugins, payment integrations, dashboards, and agent-assisted workflows.</p></div></div>
+        </div>
+      </section>
+
+      <section class="practice-section" aria-labelledby="practice-heading">
+        <p class="eyebrow">A deliberate development practice</p>
+        <div><h2 id="practice-heading">AI-assisted. Engineer-reviewed.</h2><p>I write the product specification, review the implementation plan, and use coding agents to help build. I inspect the code and trace data from the interface through the API and database. Agents also help with dependency reviews, debugging, refactoring decisions, and research.</p><p class="practice-tools">Current tools include Cursor, Codex / ChatGPT, Claude, and Hermes Agent.</p></div>
+      </section>
+
+      <section id="about" class="about-section" aria-labelledby="about-heading">
+        <div><p class="eyebrow">A little context</p><h2 id="about-heading">Builder, founder,<br>and technical partner.</h2></div>
+        <div><p>I’m Harold MacKenzie. My career has included co-founding NetZero, building engineering organizations, and helping startups make difficult technology decisions. I’ve also stayed close to the code.</p><p>At TuneGO, I led a six-month platform rebuild and took a hands-on role in product architecture, development, and security design. Today, I’m building with TypeScript, Expo, SvelteKit, Astro, and Cloudflare, alongside a background in AWS, payments, and data systems.</p><p>That experience informs how I work: understand the business problem, choose an architecture the team can support, and make the software useful.</p></div>
+      </section>
+
+      <section id="contact" class="contact-section" aria-labelledby="contact-heading">
+        <p class="eyebrow">Freelance · Contract · Consulting</p>
+        <div class="contact-grid"><h2 id="contact-heading">What are you<br><em>working on?</em></h2><div><p>Tell me what you’re building, what’s getting in the way, and where you need a hand.</p><a class="contact-email" href="mailto:haroldmackenzie@gmail.com?subject=Let%E2%80%99s%20talk%20about%20a%20project">haroldmackenzie@gmail.com <span aria-hidden="true">↗</span></a></div></div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><p>© 2026 Harold MacKenzie <span aria-hidden="true">/</span> Hapa Willow</p><a href="#main">Back to the top <span aria-hidden="true">↑</span></a></footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Harold MacKenzie – Hands-on Engineering &amp; Architecture</title>
+  <meta name="description" content="Harold MacKenzie builds web and mobile products, cloud backends, and custom integrations. Available for fractional, freelance, contract, consulting, and full-time work.">
+  <link rel="canonical" href="https://hapawillow.com/personal-portfolio/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Harold MacKenzie – I design the system. I write the code.">
+  <meta property="og:description" content="Selected web, mobile, cloud, and integration work. Freelance · Contract · Consulting.">
+  <meta property="og:url" content="https://hapawillow.com/personal-portfolio/">
+  <meta name="theme-color" content="#f7f5ef">
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <link rel="preload" href="./assets/fonts/muli-regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="./assets/fonts/muli-semibold.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="./portfolio.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="../" aria-label="Hapa Willow home">
+        <img src="../images/hapa-willow.png" alt="" width="38" height="38">
+        <span>Hapa Willow<span class="brand-divider" aria-hidden="true"> / </span><span class="brand-note">Independent work</span></span>
+      </a>
+      <nav aria-label="Portfolio navigation">
+        <a href="#work">Work</a>
+        <a href="#how-i-work">Approach</a>
+        <a href="#about">About</a>
+        <a class="nav-contact" href="#contact">Let’s talk <span aria-hidden="true">↗</span></a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-heading">
+        <div class="eyebrow">Harold MacKenzie <span aria-hidden="true">/</span> Software engineer &amp; architect</div>
+        <h1 id="hero-heading">I design the system.<br><em>I write the code.</em></h1>
+        <div class="hero-bottom">
+          <div>
+            <p class="hero-intro">I build web and mobile products, cloud backends, and the integrations that connect them. From the first architecture decision to the details people actually use.</p>
+            <div class="hero-actions">
+              <a class="button" href="#work">Explore my work <span aria-hidden="true">↓</span></a>
+              <a class="text-link" href="mailto:haroldmackenzie@gmail.com?subject=Let%E2%80%99s%20talk%20about%20a%20project">Talk about a project <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+          <aside class="availability" aria-label="Engagement types">
+            <p class="availability-title"><span class="status-dot" aria-hidden="true"></span> Open to working together</p>
+            <p>Freelance · Contract · Consulting<br />Fractional · Full-time</p>
+            <p class="muted">Based in Torrance, California</p>
+          </aside>
+        </div>
+        <div class="hero-index" aria-label="Areas of work">
+          <span><span class="index-number">01</span> Web &amp; mobile</span>
+          <span><span class="index-number">02</span> Cloud architecture</span>
+          <span><span class="index-number">03</span> APIs &amp; integrations</span>
+        </div>
+      </section>
+
+      <section id="work" class="work-section" aria-labelledby="work-heading">
+        <div class="section-heading">
+          <div><p class="eyebrow">A look inside the work</p><h2 id="work-heading">Products I’m building.</h2></div>
+          <p>Working software, connected systems,<br class="desktop-break"> and plenty of time in the code.</p>
+        </div>
+
+        <!-- Authoring notes and requested additions: docs/personal-portfolio-content.md -->
+        <article id="the-notifier" class="project project-notifier" aria-labelledby="notifier-heading">
+          <div class="project-heading">
+            <div><p class="project-meta"><span class="project-number">01</span> Current project</p><h3 id="notifier-heading">The Notifier</h3></div>
+            <a class="text-link" href="https://thenotifier.app/" target="_blank" rel="noopener noreferrer">Visit the product <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a>
+          </div>
+          <div class="project-grid">
+            <div class="project-copy">
+              <p class="project-lede">One platform. Web, mobile, and an alerting API.</p>
+              <p>A shared mobile app for personal reminders and updates from organizations people choose to follow – without the need for personally identifiable information. The business side brings together an organization dashboard, scheduled alerts, and integrations.</p>
+
+							<p>The basic flow for external alerts is:</p>
+							<ol class="work-list">
+								<li>Customer scans QR code / taps link, which opens the app.</li>
+								<li>Customer confirms they want alerts from the group.</li>
+								<li>Backend adds customer to the alert group using an app-generated device ID and push token.</li>
+								<li>Business schedules an alert from the SaaS.</li>
+								<li>Cron runs every minute to send scheduled alerts.</li>
+								<li>A push notification is created and sent to each active member in the alert group.</li>
+								<li>Alert lands on the customer's phone.</li>
+								<li>Alert opens the app and shows the alert message, note, and link.</li>
+							</ol>
+
+              <p class="role"><span>My role</span> Founder &amp; hands-on developer, building with one other engineer.</p>
+              <ul class="work-list">
+                <li>Astro websites and SvelteKit web applications.</li>
+                <li>Expo apps for iOS and Android, including Swift and Kotlin native packages.</li>
+								<li>App and platform security.</li>
+                <li>APIs, alert processes, group and member management, payment processing.</li>
+								<li>Hermes Agent for marketing research and automated outreach emails.</li>
+                <li>A custom WooCommerce plugin that connects stores to The Notifier.</li>
+              </ul>
+            </div>
+            <div class="product-visual notifier-visual notifier-carousel" role="region" aria-roledescription="carousel" aria-label="The Notifier product screenshots" data-carousel>
+              <div class="carousel-heading">From the dashboard to the phone</div>
+              <div class="notifier-slides" id="notifier-slides" tabindex="0" aria-label="Product images. Use left and right arrow keys to browse.">
+                <figure class="notifier-slide" role="group" aria-roledescription="slide" aria-label="1 of 11"><a href="./assets/notifier-appstore-001.webp" target="_blank" rel="noopener noreferrer" aria-label="View The Notifier App Store screenshot 1 full size (opens in a new tab)"><img src="./assets/notifier-appstore-001.webp" alt="The Notifier App Store image introducing alarm reminders with the headline Get Notified." width="1242" height="2688" fetchpriority="high"></a><figcaption>Get notified · Reminders with alarms cut through the noise.</figcaption></figure>
+                <figure class="notifier-slide" role="group" aria-roledescription="slide" aria-label="2 of 11"><a href="./assets/notifier-appstore-002.webp" target="_blank" rel="noopener noreferrer" aria-label="View The Notifier App Store screenshot 2 full size (opens in a new tab)"><img src="./assets/notifier-appstore-002.webp" alt="The Notifier upcoming and past reminders list on an iPhone." width="1242" height="2688" loading="lazy"></a><figcaption>Your reminders · See upcoming reminders and those in the past.</figcaption></figure>
+                <figure class="notifier-slide" role="group" aria-roledescription="slide" aria-label="3 of 11"><a href="./assets/notifier-appstore-003.webp" target="_blank" rel="noopener noreferrer" aria-label="View The Notifier App Store screenshot 3 full size (opens in a new tab)"><img src="./assets/notifier-appstore-003.webp" alt="The Notifier reminder creation form on an angled iPhone." width="1242" height="2688" loading="lazy"></a><figcaption>Easy to use · Quickly create reminders for things you can’t afford to miss.</figcaption></figure>
+                <figure class="notifier-slide" role="group" aria-roledescription="slide" aria-label="4 of 11"><a href="./assets/notifier-appstore-004.webp" target="_blank" rel="noopener noreferrer" aria-label="View The Notifier App Store screenshot 4 full size (opens in a new tab)"><img src="./assets/notifier-appstore-004.webp" alt="The Notifier missed alert notice explaining how to catch up on alerts." width="1242" height="2688" loading="lazy"></a><figcaption>Nothing missed · See alerts you might have missed.</figcaption></figure>
+                <figure class="notifier-slide" role="group" aria-roledescription="slide" aria-label="5 of 11"><a href="./assets/notifier-appstore-005.webp" target="_blank" rel="noopener noreferrer" aria-label="View The Notifier App Store screenshot 5 full size (opens in a new tab)"><img src="./assets/notifier-appstore-005.webp" alt="A reminder in The Notifier containing notes and a link." width="1242" height="2688" loading="lazy"></a><figcaption>Notes and links · Add notes and meeting links, maps, or webpages.</figcaption></figure>
+                <figure class="notifier-slide" role="group" aria-roledescription="slide" aria-label="6 of 11"><a href="./assets/notifier-appstore-006.webp" target="_blank" rel="noopener noreferrer" aria-label="View The Notifier App Store screenshot 6 full size (opens in a new tab)"><img src="./assets/notifier-appstore-006.webp" alt="A calendar update notice in The Notifier showing a changed lunch meeting." width="1242" height="2688" loading="lazy"></a><figcaption>Calendar sync · One-tap reminders from your calendar stay in sync.</figcaption></figure>
+                <figure class="notifier-slide" role="group" aria-roledescription="slide" aria-label="7 of 11"><a href="./assets/notifier-appstore-007.webp" target="_blank" rel="noopener noreferrer" aria-label="View The Notifier App Store screenshot 7 full size (opens in a new tab)"><img src="./assets/notifier-appstore-007.webp" alt="The Notifier dashboard bringing personal and group alerts together in one alert hub." width="1242" height="2688" loading="lazy"></a><figcaption>Your alert hub · One place for personal and external alerts.</figcaption></figure>
+                <figure class="notifier-slide" role="group" aria-roledescription="slide" aria-label="8 of 11"><a href="./assets/notifier-appstore-008.webp" target="_blank" rel="noopener noreferrer" aria-label="View The Notifier App Store screenshot 8 full size (opens in a new tab)"><img src="./assets/notifier-appstore-008.webp" alt="The Notifier group alert controls with options to pause alerts or leave a group." width="1242" height="2688" loading="lazy"></a><figcaption>You control · Pause alerts or leave a group.</figcaption></figure>
+                <figure class="notifier-slide" role="group" aria-roledescription="slide" aria-label="9 of 11"><a href="./assets/notifier-desktop-04.webp" target="_blank" rel="noopener noreferrer" aria-label="View The Notifier desktop alert composer screenshot full size (opens in a new tab)"><img src="./assets/notifier-desktop-04.webp" alt="The Notifier desktop dashboard composing an alert for the Builders Expo Exhibitors group." width="800" height="800" loading="lazy"></a><figcaption>Desktop dashboard · Create and schedule a group alert.</figcaption></figure>
+                <figure class="notifier-slide" role="group" aria-roledescription="slide" aria-label="10 of 11"><a href="./assets/notifier-desktop-05.webp" target="_blank" rel="noopener noreferrer" aria-label="View The Notifier desktop lock screen screenshot full size (opens in a new tab)"><img src="./assets/notifier-desktop-05.webp" alt="An iPhone lock screen showing The Notifier group alerts and an alert in the Notification Center." width="800" height="800" loading="lazy"></a><figcaption>Delivered to the lock screen and Notification Center.</figcaption></figure>
+                <figure class="notifier-slide" role="group" aria-roledescription="slide" aria-label="11 of 11"><a href="./assets/notifier-desktop-06.webp" target="_blank" rel="noopener noreferrer" aria-label="View The Notifier expanded alert screenshot full size (opens in a new tab)"><img src="./assets/notifier-desktop-06.webp" alt="The Notifier app displaying the full details of a Builders Expo group alert." width="800" height="800" loading="lazy"></a><figcaption>Open a notification to read the complete alert.</figcaption></figure>
+              </div>
+              <div class="carousel-controls">
+                <button class="carousel-arrow" type="button" data-carousel-prev aria-label="Previous image" aria-controls="notifier-slides"><span aria-hidden="true">←</span> Previous</button>
+                <span class="carousel-position" aria-live="polite" aria-atomic="true">1 / 11</span>
+                <button class="carousel-arrow" type="button" data-carousel-next aria-label="Next image" aria-controls="notifier-slides">Next <span aria-hidden="true">→</span></button>
+              </div>
+            </div>
+          </div>
+          <div class="project-stack"><span class="stack-label">Core stack</span><p>TypeScript · Expo · Cloudflare Workers · PlanetScale PostgreSQL · SvelteKit · Astro</p></div>
+          <details class="technical-details">
+            <summary>More of the stack</summary>
+            <div class="details-content stack-columns">
+              <p><strong>Runtime &amp; data</strong> Workers, Containers, KV, D1, R2 / S3, PostgreSQL, SQLite, Hono, Drizzle ORM, Apple App Attest / Google Play Integrity, HMAC-SHA-256, Keychain / Keystore, signed requests.</p>
+              <p><strong>Product &amp; integrations</strong> WorkOS, Resend, Stripe, Expo Push Notification Service, Tailwind, WordPress / WooCommerce, PHP.</p>
+              <p><strong>Workflow tooling</strong> n8n, Firecrawl, Hermes Agent, Linear.</p>
+            </div>
+          </details>
+        </article>
+
+        <article id="woocommerce" class="integration" aria-labelledby="integration-heading">
+          <div class="integration-copy">
+            <p class="eyebrow">Integration spotlight</p>
+            <h3 id="integration-heading">The last mile matters.</h3>
+            <p>I built a WordPress / WooCommerce plugin that lets a shop send ad hoc storewide updates and back-in-stock alerts for individual product variants through The Notifier.</p>
+            <p class="integration-stack">PHP · WordPress · WooCommerce · The Notifier API</p>
+          </div>
+          <figure class="integration-demo">
+            <img src="./assets/woocommerce-back-in-stock.gif" alt="WooCommerce back-in-stock alert setup and the resulting customer notification on a phone." width="332" height="719" loading="lazy">
+            <figcaption>Back-in-stock alerts for individual product variants, from setup to customer notification.</figcaption>
+          </figure>
+        </article>
+
+        <article id="senshin" class="project project-senshin" aria-labelledby="senshin-heading">
+          <div class="project-heading">
+            <div><p class="project-meta"><span class="project-number">02</span> Current project · Solo build</p><h3 id="senshin-heading">Senshin</h3></div>
+            <a class="text-link" href="https://senshin.app/" target="_blank" rel="noopener noreferrer">Visit the product <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a>
+          </div>
+          <div class="project-grid senshin-grid">
+            <div class="product-visual senshin-visual senshin-carousel" role="region" aria-roledescription="carousel" aria-label="Senshin App Store screenshots" data-carousel>
+              <div class="carousel-heading">Senshin · App Store previews</div>
+              <div class="notifier-slides" id="senshin-slides" tabindex="0" aria-label="Senshin screenshots. Use left and right arrow keys to browse.">
+                <figure class="notifier-slide" role="group" aria-roledescription="slide" aria-label="1 of 8"><a href="./assets/senshin-appstore-001.webp" target="_blank" rel="noopener noreferrer" aria-label="View Senshin screenshot 1 full size (opens in a new tab)"><img src="./assets/senshin-appstore-001.webp" alt="Senshin App Store preview: shift your mindset in one minute with the Breathe activity." width="1206" height="2622" fetchpriority="high"></a><figcaption>Shift your mindset in one minute.</figcaption></figure>
+                <figure class="notifier-slide" role="group" aria-roledescription="slide" aria-label="2 of 8"><a href="./assets/senshin-appstore-002.webp" target="_blank" rel="noopener noreferrer" aria-label="View Senshin screenshot 2 full size (opens in a new tab)"><img src="./assets/senshin-appstore-002.webp" alt="Senshin Mindsets screen with Focus, Relax, Creative, and Active options." width="1206" height="2622" loading="lazy"></a><figcaption>Choose the mindset you want to be in.</figcaption></figure>
+                <figure class="notifier-slide" role="group" aria-roledescription="slide" aria-label="3 of 8"><a href="./assets/senshin-appstore-003.webp" target="_blank" rel="noopener noreferrer" aria-label="View Senshin screenshot 3 full size (opens in a new tab)"><img src="./assets/senshin-appstore-003.webp" alt="Senshin Enigma visual activity, an optical pattern with three colored rings." width="1206" height="2622" loading="lazy"></a><figcaption>Trigger your creative mind with visual mind tricks.</figcaption></figure>
+                <figure class="notifier-slide" role="group" aria-roledescription="slide" aria-label="4 of 8"><a href="./assets/senshin-appstore-004.webp" target="_blank" rel="noopener noreferrer" aria-label="View Senshin screenshot 4 full size (opens in a new tab)"><img src="./assets/senshin-appstore-004.webp" alt="Senshin playful one-minute activity with animated emoji on a phone." width="1206" height="2622" loading="lazy"></a><figcaption>Energize for your next moment.</figcaption></figure>
+                <figure class="notifier-slide" role="group" aria-roledescription="slide" aria-label="5 of 8"><a href="./assets/senshin-appstore-005.webp" target="_blank" rel="noopener noreferrer" aria-label="View Senshin screenshot 5 full size (opens in a new tab)"><img src="./assets/senshin-appstore-005.webp" alt="Senshin Focus activity with a geometric pattern and sound and animation controls." width="1206" height="2622" loading="lazy"></a><figcaption>Get into focus mode.</figcaption></figure>
+                <figure class="notifier-slide" role="group" aria-roledescription="slide" aria-label="6 of 8"><a href="./assets/senshin-appstore-006.webp" target="_blank" rel="noopener noreferrer" aria-label="View Senshin screenshot 6 full size (opens in a new tab)"><img src="./assets/senshin-appstore-006.webp" alt="Senshin wind-down activity with gentle snowfall on a phone." width="1206" height="2622" loading="lazy"></a><figcaption>Get ready to wind down.</figcaption></figure>
+                <figure class="notifier-slide" role="group" aria-roledescription="slide" aria-label="7 of 8"><a href="./assets/senshin-appstore-007.webp" target="_blank" rel="noopener noreferrer" aria-label="View Senshin screenshot 7 full size (opens in a new tab)"><img src="./assets/senshin-appstore-007.webp" alt="Senshin Creative activity with fireworks and playful visual effects." width="1206" height="2622" loading="lazy"></a><figcaption>Spark your motivation to get started.</figcaption></figure>
+                <figure class="notifier-slide" role="group" aria-roledescription="slide" aria-label="8 of 8"><a href="./assets/senshin-appstore-008.webp" target="_blank" rel="noopener noreferrer" aria-label="View Senshin screenshot 8 full size (opens in a new tab)"><img src="./assets/senshin-appstore-008.webp" alt="Senshin Dashboard tracking Focus, Relax, Creative, and Active activity over time." width="1206" height="2622" loading="lazy"></a><figcaption>Track your mindsets and mind shifts.</figcaption></figure>
+              </div>
+              <div class="carousel-controls">
+                <button class="carousel-arrow" type="button" data-carousel-prev aria-label="Previous image" aria-controls="senshin-slides"><span aria-hidden="true">←</span> Previous</button>
+                <span class="carousel-position" aria-live="polite" aria-atomic="true">1 / 8</span>
+                <button class="carousel-arrow" type="button" data-carousel-next aria-label="Next image" aria-controls="senshin-slides">Next <span aria-hidden="true">→</span></button>
+              </div>
+            </div>
+            <div class="project-copy">
+              <p class="project-lede">Small interactions. A complete mobile product.</p>
+              <p>One-minute activities that use sound, visuals, haptics, and simple play to help people take a purposeful break. The experience spans four categories: Focus, Relax, Creative, and Active.</p>
+              <p class="role"><span>My role</span> Solo builder, from the mobile experience to the supporting cloud services.</p>
+              <ul class="work-list">
+                <li>Expo mobile development with local SQLite storage.</li>
+                <li>Interactive activities combining audio, visuals, and touch.</li>
+                <li>Cloudflare Workers, D1, and R2 supporting the app.</li>
+                <li>RevenueCat subscriptions and an Astro website in five languages.</li>
+              </ul>
+              <p class="project-note">Currently in development for iPhone.</p>
+            </div>
+          </div>
+          <div class="project-stack"><span class="stack-label">Core stack</span><p>TypeScript · Expo · SQLite · Cloudflare Workers / D1 / R2 · RevenueCat</p></div>
+          <details class="technical-details">
+            <summary>More of the stack</summary>
+            <div class="details-content"><p>Hono · Drizzle ORM · Tailwind · Astro · Expo Push Notification Service · Linear. The Expo codebase targets iOS and Android; the current public product is focused on iPhone.</p></div>
+          </details>
+        </article>
+
+      </section>
+
+      <section id="earlier-work" class="archive-section" aria-labelledby="archive-heading">
+        <div class="section-heading">
+          <div><p class="eyebrow">More from the workbench</p><h2 id="archive-heading">Earlier projects.</h2></div>
+          <p>Payments, learning, blockchain, SaaS, data, and creative tooling.<br class="desktop-break"> Open a project for the technical details.</p>
+        </div>
+        <div class="archive-list">
+          <details id="finlit-iq" class="archive-item">
+            <summary><span class="archive-number">01</span><span class="archive-title">FinLit IQ<span>Financial literacy · Mobile &amp; web</span></span><span class="archive-tools">Expo / Cloudflare / PostgreSQL</span><span class="expand-icon" aria-hidden="true"></span></summary>
+            <div class="archive-content">
+              <div><h3>Chatbot, Duolingo-style courses, Gamification.</h3><p>I co-founded a 10-person startup building a financial literacy product that combined short lessons, proactive guidance, and gamification. I designed and developed web and mobile experiences and an architecture using low-cost computing and AI agents for content workflows. I built all the backend processes for authentication, course management, gamification, stats and metrics.</p><p><strong>Technical work:</strong> Astro and SvelteKit web development, Expo mobile development, PostgreSQL on Neon, SQLite on Turso, Drizzle ORM, R2 storage, and custom OAuth authentication.</p><p class="archive-stack">Also: TypeScript · Tailwind · Hono · Resend</p></div>
+              <div class="archive-carousel product-visual" role="region" aria-roledescription="carousel" aria-label="FinLit IQ mobile app screenshots and architecture diagram" data-carousel>
+                <div class="carousel-heading">FinLit IQ · Product and architecture</div>
+                <div class="notifier-slides" id="finlit-slides" tabindex="0" aria-label="Product images. Use left and right arrow keys to browse.">
+                  <figure class="notifier-slide" role="group" aria-roledescription="slide" aria-label="1 of 6"><a href="./assets/finlit-screen-1.webp" target="_blank" rel="noopener noreferrer" aria-label="View FinLit IQ screenshot 1 full size (opens in a new tab)"><img src="./assets/finlit-screen-1.webp" alt="FinLit IQ mobile app screen 1." width="2436" height="5366" fetchpriority="high"></a><figcaption>FinLit IQ mobile app · Screen 1 of 5</figcaption></figure>
+                  <figure class="notifier-slide" role="group" aria-roledescription="slide" aria-label="2 of 6"><a href="./assets/finlit-screen-2.webp" target="_blank" rel="noopener noreferrer" aria-label="View FinLit IQ screenshot 2 full size (opens in a new tab)"><img src="./assets/finlit-screen-2.webp" alt="FinLit IQ mobile app screen 2." width="2436" height="5366" loading="lazy"></a><figcaption>FinLit IQ mobile app · Screen 2 of 5</figcaption></figure>
+                  <figure class="notifier-slide" role="group" aria-roledescription="slide" aria-label="3 of 6"><a href="./assets/finlit-screen-3.webp" target="_blank" rel="noopener noreferrer" aria-label="View FinLit IQ screenshot 3 full size (opens in a new tab)"><img src="./assets/finlit-screen-3.webp" alt="FinLit IQ mobile app screen 3." width="2436" height="5366" loading="lazy"></a><figcaption>FinLit IQ mobile app · Screen 3 of 5</figcaption></figure>
+                  <figure class="notifier-slide" role="group" aria-roledescription="slide" aria-label="4 of 6"><a href="./assets/finlit-screen-4.webp" target="_blank" rel="noopener noreferrer" aria-label="View FinLit IQ screenshot 4 full size (opens in a new tab)"><img src="./assets/finlit-screen-4.webp" alt="FinLit IQ mobile app screen 4." width="2436" height="5366" loading="lazy"></a><figcaption>FinLit IQ mobile app · Screen 4 of 5</figcaption></figure>
+                  <figure class="notifier-slide" role="group" aria-roledescription="slide" aria-label="5 of 6"><a href="./assets/finlit-screen-5.webp" target="_blank" rel="noopener noreferrer" aria-label="View FinLit IQ screenshot 5 full size (opens in a new tab)"><img src="./assets/finlit-screen-5.webp" alt="FinLit IQ mobile app screen 5." width="2436" height="5366" loading="lazy"></a><figcaption>FinLit IQ mobile app · Screen 5 of 5</figcaption></figure>
+                  <figure class="notifier-slide" role="group" aria-roledescription="slide" aria-label="6 of 6"><a href="./assets/finlit-architecture.webp" target="_blank" rel="noopener noreferrer" aria-label="View the FinLit IQ architecture diagram full size (opens in a new tab)"><img src="./assets/finlit-architecture.webp" alt="FinLit IQ architecture diagram connecting course management, users, gamification, reporting, and lead generation to a mobile app." width="2200" height="1968" loading="lazy"></a><figcaption>Architecture planning diagram · View full size</figcaption></figure>
+                </div>
+                <div class="carousel-controls">
+                  <button class="carousel-arrow" type="button" data-carousel-prev aria-label="Previous image" aria-controls="finlit-slides"><span aria-hidden="true">←</span> Previous</button>
+                  <span class="carousel-position" aria-live="polite" aria-atomic="true">1 / 6</span>
+                  <button class="carousel-arrow" type="button" data-carousel-next aria-label="Next image" aria-controls="finlit-slides">Next <span aria-hidden="true">→</span></button>
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <details id="tunego-dashboard" class="archive-item">
+            <summary><span class="archive-number">05</span><span class="archive-title">TuneGO Dashboard<span>Internal business intelligence</span></span><span class="archive-tools">SvelteKit / Turso / ApexCharts</span><span class="expand-icon" aria-hidden="true"></span></summary>
+            <div class="archive-content"><div>
+						<h3>Make business health easier to read.</h3>
+						<p>Internal dashboards for business performance, revenue, and KPIs, refreshed every ten minutes. It was built to replace the existing AWS QuickSight dashboard and showcase low-cost / free tools to reduce company expenses.</p>
+						<p>It cost $0/mo and ran on Vercel. The dashboards did not have direct access to the company’s production systems. A cron ran a Python script to extract and summarize data from the AWS RDS read-replica to the dashboard's Turso database. It used a simple authorization and access control system: OTP, restricted to company email addresses, and whitelists.</p>
+						<p><strong>Technical focus:</strong> SvelteKit interfaces, ApexCharts visualizations, Drizzle data access, and passwordless sign-in with Lucia and Loops.</p><p class="archive-stack">TypeScript / Node.js · SvelteKit · Turso · Drizzle ORM · Lucia · Loops · ApexCharts</p></div>
+              <div class="archive-carousel product-visual" role="region" aria-roledescription="carousel" aria-label="TuneGO Dashboard screenshots" data-carousel>
+                <div class="carousel-heading">TuneGO Dashboard · Business intelligence</div>
+                <div class="notifier-slides" id="tunego-slides" tabindex="0" aria-label="Dashboard images. Use left and right arrow keys to browse.">
+                  <figure class="notifier-slide" role="group" aria-roledescription="slide" aria-label="1 of 2"><a href="./assets/tunego-dashboard-revenue.webp" target="_blank" rel="noopener noreferrer" aria-label="View TuneGO revenue dashboard screenshot full size (opens in a new tab)"><img src="./assets/tunego-dashboard-revenue.webp" alt="TuneGO revenue dashboard with primary and secondary revenue totals and daily and quarterly charts." width="2976" height="1954" fetchpriority="high"></a><figcaption>Revenue overview with daily and quarterly trends.</figcaption></figure>
+                  <figure class="notifier-slide" role="group" aria-roledescription="slide" aria-label="2 of 2"><a href="./assets/tunego-dashboard-activity.webp" target="_blank" rel="noopener noreferrer" aria-label="View TuneGO activity dashboard screenshot full size (opens in a new tab)"><img src="./assets/tunego-dashboard-activity.webp" alt="TuneGO activity dashboard tracking wallets, creators, transactions, and collectible drops with daily charts." width="1578" height="910" loading="lazy"></a><figcaption>Wallet, creator, transaction, and drop activity.</figcaption></figure>
+                </div>
+                <div class="carousel-controls">
+                  <button class="carousel-arrow" type="button" data-carousel-prev aria-label="Previous image" aria-controls="tunego-slides"><span aria-hidden="true">←</span> Previous</button>
+                  <span class="carousel-position" aria-live="polite" aria-atomic="true">1 / 2</span>
+                  <button class="carousel-arrow" type="button" data-carousel-next aria-label="Next image" aria-controls="tunego-slides">Next <span aria-hidden="true">→</span></button>
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <details id="tiki-totems" class="archive-item">
+            <summary><span class="archive-number">06</span><span class="archive-title">Tiki Totems<span>Generative art &amp; minting tools</span></span><span class="archive-tools">Node.js / Canvas / Solana</span><span class="expand-icon" aria-hidden="true"></span></summary>
+            <div class="archive-content">
+              <div><h3>From layered artwork to a collection.</h3><p>A generative art project with a Node.js tool for composing layered assets, controlling trait quantities, and producing a rarity table. The broader project used an Astro site, Cloudflare Workers, Metaplex Candy Machine on Solana, and Arweave to store NFTs on-chain.</p><p class="archive-stack">JavaScript / Node.js · Canvas API · Cloudflare Workers · Astro · Metaplex Candy Machine · Solana · Arweave</p></div>
+              <div class="archive-carousel product-visual" role="region" aria-roledescription="carousel" aria-label="Tiki Totems wallet and website screenshots" data-carousel>
+                <div class="carousel-heading">Tiki Totems · Collection and mint site</div>
+                <div class="notifier-slides" id="tiki-slides" tabindex="0" aria-label="Project images. Use left and right arrow keys to browse.">
+                  <figure class="notifier-slide" role="group" aria-roledescription="slide" aria-label="1 of 2"><a href="./assets/tiki-totem-wallet.webp" target="_blank" rel="noopener noreferrer" aria-label="View Tiki Totem wallet screenshot full size (opens in a new tab)"><img src="./assets/tiki-totem-wallet.webp" alt="Tiki Totem #23 shown in the Phantom wallet with its art and collectible traits." width="900" height="2526" fetchpriority="high"></a><figcaption>A minted Tiki Totem and its generated traits in Phantom.</figcaption></figure>
+                  <figure class="notifier-slide" role="group" aria-roledescription="slide" aria-label="2 of 2"><a href="./assets/tiki-totems-site.webp" target="_blank" rel="noopener noreferrer" aria-label="View Tiki Totems website screenshot full size (opens in a new tab)"><img src="./assets/tiki-totems-site.webp" alt="Tiki Totems mint website with collection artwork, mint controls, and project details." width="1440" height="2241" loading="lazy"></a><figcaption>The collection website and mint experience.</figcaption></figure>
+                </div>
+                <div class="carousel-controls">
+                  <button class="carousel-arrow" type="button" data-carousel-prev aria-label="Previous image" aria-controls="tiki-slides"><span aria-hidden="true">←</span> Previous</button>
+                  <span class="carousel-position" aria-live="polite" aria-atomic="true">1 / 2</span>
+                  <button class="carousel-arrow" type="button" data-carousel-next aria-label="Next image" aria-controls="tiki-slides">Next <span aria-hidden="true">→</span></button>
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <details id="yez" class="archive-item">
+            <summary><span class="archive-number">02</span><span class="archive-title">Yez<span>B2B &amp; cross-border payments</span></span><span class="archive-tools">AWS Lambda / DynamoDB / Stellar</span><span class="expand-icon" aria-hidden="true"></span></summary>
+            <div class="archive-content">
+              <div><h3>Payment workflows across systems and borders.</h3><p>A B2B payments project for SMBs focused on cross-border transfers, digital invoicing, escrow, and a USD-based stablecoin. It included an investor portal where investors could register for the ICO and try a live demo. The technical stack combined AWS serverless services with the Stellar blockchain.</p><p class="archive-stack">TypeScript · AWS Lambda · DynamoDB · SES · Hugo · Airtable · Stellar</p></div>
+              <div class="archive-carousel product-visual" role="region" aria-roledescription="carousel" aria-label="Yez payment architecture diagrams" data-carousel>
+                <div class="carousel-heading">Yez · Payment and licensing flows</div>
+                <div class="notifier-slides" id="yez-slides" tabindex="0" aria-label="Architecture diagrams. Use left and right arrow keys to browse.">
+                  <figure class="notifier-slide" role="group" aria-roledescription="slide" aria-label="1 of 2"><a href="./assets/yez-payment-flow.webp" target="_blank" rel="noopener noreferrer" aria-label="View the Yez payment flow diagram full size (opens in a new tab)"><img src="./assets/yez-payment-flow.webp" alt="Yez payment flow diagram connecting two stores, the Yez Payments Network, Stellar blockchain, a coin converter, secure bank, and shipping information." width="2549" height="2374" fetchpriority="high"></a><figcaption>Store payment flow across the Yez network and Stellar.</figcaption></figure>
+                  <figure class="notifier-slide" role="group" aria-roledescription="slide" aria-label="2 of 2"><a href="./assets/yez-tunego-jv.webp" target="_blank" rel="noopener noreferrer" aria-label="View the Yez and TuneGO joint venture diagram full size (opens in a new tab)"><img src="./assets/yez-tunego-jv.webp" alt="Yez and TuneGO joint venture diagram showing music licensing between musicians, record labels, movie producers, and TGO smart contracts." width="922" height="445" loading="lazy"></a><figcaption>Music licensing and payment relationships using Yez.</figcaption></figure>
+                </div>
+                <div class="carousel-controls">
+                  <button class="carousel-arrow" type="button" data-carousel-prev aria-label="Previous image" aria-controls="yez-slides"><span aria-hidden="true">←</span> Previous</button>
+                  <span class="carousel-position" aria-live="polite" aria-atomic="true">1 / 2</span>
+                  <button class="carousel-arrow" type="button" data-carousel-next aria-label="Next image" aria-controls="yez-slides">Next <span aria-hidden="true">→</span></button>
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <details id="givful" class="archive-item">
+            <summary><span class="archive-number">03</span><span class="archive-title">Givful<span>Donations &amp; member engagement</span></span><span class="archive-tools">PHP / MySQL / Stripe / Twilio</span><span class="expand-icon" aria-hidden="true"></span></summary>
+            <div class="archive-content">
+              <div><h3>A donation flow that keeps people involved.</h3><p>A nonprofit giving platform with branded donation pages, scheduled SMS reminders, PIN-approved donations, and reporting. The product connected member registration, payments, and recurring engagement.</p><p class="archive-stack">JavaScript · Foundation · PHP / Slim · Custom OAuth 2.0 · AWS EC2 / RDS MySQL / SES · Stripe · Twilio</p></div>
+              <div class="archive-carousel product-visual" role="region" aria-roledescription="carousel" aria-label="Givful donation and reporting screenshots" data-carousel>
+                <div class="carousel-heading">Givful · Giving and reporting</div>
+                <div class="notifier-slides" id="givful-slides" tabindex="0" aria-label="Product images. Use left and right arrow keys to browse.">
+                  <figure class="notifier-slide" role="group" aria-roledescription="slide" aria-label="1 of 3"><a href="./assets/givful-donation-form.webp" target="_blank" rel="noopener noreferrer" aria-label="View Givful donation form screenshot full size (opens in a new tab)"><img src="./assets/givful-donation-form.webp" alt="Givful mobile donation form with giving amounts for several church funds." width="931" height="1509" fetchpriority="high"></a><figcaption>A branded mobile donation form with multiple fund categories.</figcaption></figure>
+                  <figure class="notifier-slide" role="group" aria-roledescription="slide" aria-label="2 of 3"><a href="./assets/givful-yearly-goal.webp" target="_blank" rel="noopener noreferrer" aria-label="View Givful yearly giving goal screenshot full size (opens in a new tab)"><img src="./assets/givful-yearly-goal.webp" alt="Givful yearly giving goal dashboard showing progress toward a fundraising target." width="931" height="1511" loading="lazy"></a><figcaption>Progress toward a yearly giving goal.</figcaption></figure>
+                  <figure class="notifier-slide" role="group" aria-roledescription="slide" aria-label="3 of 3"><a href="./assets/givful-allocation.webp" target="_blank" rel="noopener noreferrer" aria-label="View Givful donation allocation chart screenshot full size (opens in a new tab)"><img src="./assets/givful-allocation.webp" alt="Givful chart showing how donations were allocated across church funds." width="931" height="1511" loading="lazy"></a><figcaption>Breakdown of donations allocated across funds.</figcaption></figure>
+                </div>
+                <div class="carousel-controls">
+                  <button class="carousel-arrow" type="button" data-carousel-prev aria-label="Previous image" aria-controls="givful-slides"><span aria-hidden="true">←</span> Previous</button>
+                  <span class="carousel-position" aria-live="polite" aria-atomic="true">1 / 3</span>
+                  <button class="carousel-arrow" type="button" data-carousel-next aria-label="Next image" aria-controls="givful-slides">Next <span aria-hidden="true">→</span></button>
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <details id="dnote" class="archive-item">
+            <summary><span class="archive-number">04</span><span class="archive-title">Dnote Mobile<span>Payments, digital gift cards &amp; loyalty</span></span><span class="archive-tools">Ionic / Angular / AWS / Payments</span><span class="expand-icon" aria-hidden="true"></span></summary>
+            <div class="archive-content"><div><h3>Mobile payments for small businesses.</h3>
+
+							<p>A payment and loyalty platform bringing mobile payments, digital gift cards, and PIN-approved transactions to small businesses, giving them the same functionality as the Starbucks mobile app. It combined customer payment flows, merchant tools and access controls, messaging, Stripe payments, ACH payouts, loyalty rewards and APIs for third-party developers.</p>
+
+							<p class="role">Key components were:</p>
+              <ul class="work-list">
+                <li>A business-only mobile app to process transactions that worked both offline and online.</li>
+                <li>No app for consumers to install.</li>
+                <li>Web portal for consumers to manage their account, load funds, and review transaction history.</li>
+                <li>Business portal to manage user seats, customers, payment transactions, and process payments.</li>
+              </ul>
+
+						<p class="archive-stack">JavaScript · Angular 2 · Ionic · Bootstrap / Foundation · PHP / Slim · OAuth 2.0 · AWS EC2 / RDS MySQL / SES · Stripe · Twilio</p></div>
+              <div class="archive-carousel product-visual" role="region" aria-roledescription="carousel" aria-label="Dnote payment workflow and system screenshots" data-carousel>
+                <div class="carousel-heading">Dnote · Payments and business tools</div>
+                <div class="notifier-slides" id="dnote-slides" tabindex="0" aria-label="Dnote project images. Use left and right arrow keys to browse.">
+                  <figure class="notifier-slide" role="group" aria-roledescription="slide" aria-label="1 of 5"><a href="./assets/dnote-system-overview.webp" target="_blank" rel="noopener noreferrer" aria-label="View Dnote system overview diagram full size (opens in a new tab)"><img src="./assets/dnote-system-overview.webp" alt="Dnote system overview diagram showing customer and business portals, Dnote services, payment processing, bank accounts, gift cards, SMS, and related flows." width="3843" height="3174" fetchpriority="high"></a><figcaption>Dnote system overview · Portals, payments, messaging, and banking.</figcaption></figure>
+                  <figure class="notifier-slide" role="group" aria-roledescription="slide" aria-label="2 of 5"><a href="./assets/dnote-create-debit.webp" target="_blank" rel="noopener noreferrer" aria-label="View the create debit screen full size (opens in a new tab)"><img src="./assets/dnote-create-debit.webp" alt="Merchant interface for entering an amount and note to debit from a customer." width="800" height="800" loading="lazy"></a><figcaption>Charge the customer · Enter a debit amount and transaction note.</figcaption></figure>
+                  <figure class="notifier-slide" role="group" aria-roledescription="slide" aria-label="3 of 5"><a href="./assets/dnote-approve-debit.webp" target="_blank" rel="noopener noreferrer" aria-label="View the approve debit screen full size (opens in a new tab)"><img src="./assets/dnote-approve-debit.webp" alt="Customer approval screen requesting a PIN to approve a debit, with an optional tip." width="800" height="800" loading="lazy"></a><figcaption>Customer approval · Confirm the charge with a PIN.</figcaption></figure>
+                  <figure class="notifier-slide" role="group" aria-roledescription="slide" aria-label="4 of 5"><a href="./assets/dnote-business-transactions.webp" target="_blank" rel="noopener noreferrer" aria-label="View business transactions screenshot full size (opens in a new tab)"><img src="./assets/dnote-business-transactions.webp" alt="Dnote business activity page listing customer loads, debits, and tips." width="1080" height="1920" loading="lazy"></a><figcaption>Business transactions · Review customer loads, debits, and tips.</figcaption></figure>
+                  <figure class="notifier-slide" role="group" aria-roledescription="slide" aria-label="5 of 5"><a href="./assets/dnote-account-setup.webp" target="_blank" rel="noopener noreferrer" aria-label="View Dnote business account setup screen full size (opens in a new tab)"><img src="./assets/dnote-account-setup.webp" alt="Dnote business setup screen for configuring a digital gift card, limits, tipping, and customer information." width="1080" height="1920" loading="lazy"></a><figcaption>Account setup · Configure gift card limits and customer options.</figcaption></figure>
+                </div>
+                <div class="carousel-controls">
+                  <button class="carousel-arrow" type="button" data-carousel-prev aria-label="Previous image" aria-controls="dnote-slides"><span aria-hidden="true">←</span> Previous</button>
+                  <span class="carousel-position" aria-live="polite" aria-atomic="true">1 / 5</span>
+                  <button class="carousel-arrow" type="button" data-carousel-next aria-label="Next image" aria-controls="dnote-slides">Next <span aria-hidden="true">→</span></button>
+                </div>
+              </div>
+            </div>
+          </details>
+
+        </div>
+      </section>
+
+      <section id="how-i-work" class="approach-section" aria-labelledby="approach-heading">
+        <div class="approach-intro"><p class="eyebrow">How I can help</p><h2 id="approach-heading">A technical partner<br>who stays in the work.</h2><p>I work across the product, the code, and the infrastructure. Bring me in for a focused build, an integration, or an architecture problem that needs a practical path forward.</p></div>
+        <div class="offer-list">
+          <div class="offer"><span class="index-number">01</span><div><h3>Build a product or a feature</h3><p>Web applications, Expo mobile apps, APIs, authentication, and subscriptions. Connect the pieces into a usable product.</p></div></div>
+          <div class="offer"><span class="index-number">02</span><div><h3>Simplify the architecture</h3><p>Review a platform, untangle its dependencies, and plan a rebuild or migration. Experience spans AWS, Kubernetes, and today’s Cloudflare stack.</p></div></div>
+          <div class="offer"><span class="index-number">03</span><div><h3>Connect systems &amp; workflows</h3><p>Custom WordPress / WooCommerce plugins, payment integrations, dashboards, and agent-assisted workflows.</p></div></div>
+        </div>
+      </section>
+
+      <section class="practice-section" aria-labelledby="practice-heading">
+        <p class="eyebrow">A deliberate development practice</p>
+        <div><h2 id="practice-heading">AI-assisted. Engineer-reviewed.</h2><p>I write the product specification, review the implementation plan, and use coding agents to help build. I inspect the code and trace data from the interface through the API and database. Agents also help with dependency reviews, debugging, refactoring decisions, and research.</p><p class="practice-tools">Current tools include Cursor, Codex / ChatGPT, Claude, and Hermes Agent.</p></div>
+      </section>
+
+      <section id="about" class="about-section" aria-labelledby="about-heading">
+        <div><p class="eyebrow">A little context</p><h2 id="about-heading">Builder, founder,<br>and technical partner.</h2></div>
+        <div><p>I’m Harold MacKenzie. My career has included co-founding NetZero, building engineering organizations, and helping startups make difficult technology decisions. I’ve also stayed close to the code.</p><p>At TuneGO, I led a six-month platform rebuild and took a hands-on role in product architecture, development, and security design. Today, I’m building with TypeScript, Expo, SvelteKit, Astro, and Cloudflare, alongside a background in AWS, payments, and data systems.</p><p>That experience informs how I work: understand the business problem, choose an architecture the team can support, and make the software useful.</p></div>
+      </section>
+
+      <section id="contact" class="contact-section" aria-labelledby="contact-heading">
+        <p class="eyebrow">Freelance · Contract · Consulting<br />Fractional · Full-time</p>
+        <div class="contact-grid"><h2 id="contact-heading">What are you<br><em>working on?</em></h2><div><p>Tell me what you’re building, what’s getting in the way, and where you need a hand.</p><a class="contact-email" href="mailto:haroldmackenzie@gmail.com?subject=Let%E2%80%99s%20talk%20about%20a%20project">haroldmackenzie@gmail.com <span aria-hidden="true">↗</span></a></div></div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><p>© 2026 Harold MacKenzie <span aria-hidden="true">/</span> Hapa Willow</p><a href="#main">Back to the top <span aria-hidden="true">↑</span></a></footer>
+  </div>
+  <script src="./portfolio.js" defer></script>
+</body>
+</html>
